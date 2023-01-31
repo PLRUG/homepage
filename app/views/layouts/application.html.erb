@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PLRUG - Polish Ruby User Group</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a class="nav__logo" href="/">
+          <%= image_tag "logos/logo.svg", alt: "PLRUG logo" %>
+        </a>
+        <div class="menu-content">
+          <ul>
+            <li>
+              <a class="link" href="#partners">Partners</a>
+            </li>
+          </ul>
+          <a class="cta cta-secondary" href="https://discord.com/invite/bUV9u3PSPF" target="_blank">Join our discord</a>
+        </div>
+      </nav>
+      <nav class="nav-mobile">
+        <a href="/">
+          <%= image_tag "logos/logo-mobile.svg", alt: "PLRUG logo" %>
+        </a>
+        <input type="checkbox" class="nav-mobile__input">
+        <img src="./assets/icons/hamburger-icon.svg" />
+        <div class="menu-mobile">
+          <div class="menu-header">
+            <%= link_to root_url do %>
+              <%= image_tag "logos/logo-mobile.svg", alt: "PLRUG logo" %>
+            <% end %>
+            <%= image_tag "icons/close-icon.svg", alt: "close mobile menu button" %>
+          </div>
+          <div class="menu-content">
+            <ul>
+              <li>
+                <a class="link-mobile" href="#partners">Partners</a>
+              </li>
+            </ul>
+            <a class="cta cta-secondary" href="https://discord.com/invite/bUV9u3PSPF" target="_blank">Join our discord</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <%= yield %>
+  </body>
+</html>

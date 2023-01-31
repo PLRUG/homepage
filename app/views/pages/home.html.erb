@@ -1,0 +1,90 @@
+<section class="hero-section">
+  <hgroup class="hgroup">
+    <h1>Polish Ruby User Group</h1>
+    <p class="hgroup__text">
+      Join the community created by Ruby-lovers for creators, enthusiasts,
+      nerds and passionates.
+    </p>
+  </hgroup>
+  <div class="discord-box">
+    <div class="discord-cta">
+      <a class="cta cta-primary" href="https://discord.com/invite/bUV9u3PSPF" target="_blank">Join our discord</a>
+      <p class="discord-cta__count">
+        <span class="discord-cta__dot"></span>
+        27 members online
+      </p>
+    </div>
+    <%= image_tag "discord-mobile.svg", class:"discord-box__img" %>
+  </div>
+</section>
+<section class="partners-section" id="partners">
+  <h2>Partners</h2>
+  <ul class="logos-list">
+    <li>
+      <%= link_to "https://www.visuality.pl", class: "logos-list__item", target: "_blank" do %>
+        <%= image_tag "logos/visuality-logo.svg" %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "https://occson.com", class: "logos-list__item", target: "_blank" do %>
+        <%= image_tag "logos/occson-logo.svg" %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "https://netguru.com", class: "logos-list__item", target: "_blank" do %>
+        <%= image_tag "logos/netguru-logo.svg" %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "https://reffine.com", class: "logos-list__item", target: "_blank" do %>
+        <%= image_tag "logos/reffine-logo.svg" %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "https://www.2n.pl", class: "logos-list__item", target: "_blank" do %>
+        <%= image_tag "logos/2n-logo.svg" %>
+      <% end %>
+    </li>
+  </ul>
+  <a class="cta cta-primary" href="#contact-cta">Become a partner </a>
+</section>
+<section class="contact-section">
+  <h2>Contact</h2>
+  <div class="form-notification">
+    <%# <div class="notification-box">
+      <img src="./assets/icons/send-icon.svg" />
+      <p>Twoja wiadomość została wysłana</p>
+    </div> %>
+  </div>
+  <form class="contact-form">
+    <div class="form-box">
+      <input
+        class="form-box__input"
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Name"
+        required
+      />
+    </div>
+    <div class="form-box">
+      <input
+        <%# class="form-box__input form-box__input--error" %>
+        class="form-box__input"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+      <%# <div class="error-box">
+        <img src="./assets/icons/error-icon.svg" />
+        <p class="error-box__text">Error message</p>
+      </div> %>
+    </div>
+    <textarea class="form-box__input" id="message" name="message" placeholder="Message" rows="4"></textarea>
+    <div class="form-button">
+      <button class="cta cta-primary" id="contact-cta">Send</button>
+    </div>
+  </form>
+</section>
