@@ -164,13 +164,15 @@ a:hover {
 .discord-box {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
 }
 
 .discord-cta {
   position: absolute;
-  bottom: 2rem;
+  top: 2rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,6 +197,30 @@ a:hover {
   height: 6px;
   border-radius: 50%;
   background: var(--green-lighter);
+}
+
+.discord-members-list {
+  display: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.discord-members-list ul {
+  display: flex;
+  width: 35%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+}
+
+.discord-members-list ul li {
+  margin-right: 0.5rem;
+}
+
+.discord-members-list ul li img {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
 }
 
 .partners-section {

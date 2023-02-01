@@ -11,8 +11,17 @@
       <a class="cta cta-primary" href="https://discord.com/invite/bUV9u3PSPF" target="_blank">Join our discord</a>
       <p class="discord-cta__count">
         <span class="discord-cta__dot"></span>
-        27 members online
+        <%= discord_gateway.online_members_count %> members online
       </p>
+    </div>
+    <div class="discord-members-list">
+      <ul>
+        <% discord_gateway.first_30_members.each do |member| %>
+          <li>
+            <%= image_tag member.avatar_url, alt: 'avatar logo' %>
+          </li>
+        <% end %>
+      </ul>
     </div>
     <%= image_tag "discord-mobile.svg", class:"discord-box__img" %>
   </div>

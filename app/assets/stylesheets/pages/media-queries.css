@@ -46,6 +46,10 @@
         display: none;
     }
 
+    .discord-members-list {
+      display: flex;
+    }
+
     .discord-box {
         background-image: url(discord-desktop.svg);
         background-repeat: no-repeat;
