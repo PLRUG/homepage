@@ -16,6 +16,13 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+
+    <% flash.each do |type, msg| %>
+      <div class="flash-messages">
+        <p><%= msg %></p>
+      </div>
+    <% end %>
+
     <header class="header">
       <nav class="nav">
         <a class="nav__logo" href="/">

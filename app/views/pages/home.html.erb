@@ -50,41 +50,16 @@
 </section>
 <section class="contact-section">
   <h2>Contact</h2>
-  <div class="form-notification">
-    <%# <div class="notification-box">
-      <img src="./assets/icons/send-icon.svg" />
-      <p>Twoja wiadomość została wysłana</p>
-    </div> %>
-  </div>
-  <form class="contact-form">
+  <%= form_for contact_request, html: { class: 'contact-form' } do |f| %>
     <div class="form-box">
-      <input
-        class="form-box__input"
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Name"
-        required
-      />
+      <%= f.text_field :name, placeholder: 'Name', class: 'form-box__input', required: true %>
     </div>
     <div class="form-box">
-      <input
-        <%# class="form-box__input form-box__input--error" %>
-        class="form-box__input"
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Email"
-        required
-      />
-      <%# <div class="error-box">
-        <img src="./assets/icons/error-icon.svg" />
-        <p class="error-box__text">Error message</p>
-      </div> %>
+      <%= f.email_field :email, placeholder: 'Your Email', class: 'form-box__input', required: true %>
     </div>
-    <textarea class="form-box__input" id="message" name="message" placeholder="Message" rows="4"></textarea>
+    <%= f.text_area :message, placeholder: 'Your message', class: "form-box__input", rows: 5 %>
     <div class="form-button">
-      <button class="cta cta-primary" id="contact-cta">Send</button>
+      <%= f.submit :send, class: 'cta cta-primary', id: "contact-cta" %>
     </div>
-  </form>
+  <% end %>
 </section>
