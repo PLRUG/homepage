@@ -38,6 +38,7 @@ a:hover {
   line-height: 21px;
   text-transform: uppercase;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
 
 .cta-primary {
