@@ -33,6 +33,7 @@ a:hover {
   font-size: 0.875rem;
   line-height: 21px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .cta-primary {
