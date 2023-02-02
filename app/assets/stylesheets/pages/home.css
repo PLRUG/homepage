@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-base);
@@ -33,6 +37,8 @@ a:hover {
   font-size: 0.875rem;
   line-height: 21px;
   text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
 
 .cta-primary {
@@ -162,21 +168,25 @@ a:hover {
 }
 
 .discord-box {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  background-image: url(discord-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 456px;
+  border-radius: 24px 24px 0 0;
+  padding: 1rem;
 }
 
 .discord-cta {
-  position: absolute;
-  top: 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .discord-cta__count {
@@ -200,14 +210,13 @@ a:hover {
 }
 
 .discord-members-list {
-  display: none;
+  display: flex;
   width: 100%;
   justify-content: center;
 }
 
 .discord-members-list ul {
   display: flex;
-  width: 35%;
   justify-content: center;
   flex-wrap: wrap;
   margin: 1rem auto;
@@ -233,10 +242,10 @@ a:hover {
 }
 
 .logos-list {
-  display: grid;
-  grid-gap: 5rem;
-  grid-template-columns: repeat(auto-fit, 200px);
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
   width: 100%;
   max-width: 500px;
 }
@@ -336,6 +345,7 @@ a:hover {
     opacity: 0;
     visibility: hidden;
   }
+
   100% {
     opacity: 1;
     visibility: visible;

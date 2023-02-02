@@ -7,14 +7,7 @@
     </p>
   </hgroup>
   <div class="discord-box">
-    <div class="discord-cta">
-      <a class="cta cta-primary" href="https://discord.com/invite/bUV9u3PSPF" target="_blank">Join our discord</a>
-      <p class="discord-cta__count">
-        <span class="discord-cta__dot"></span>
-        <%= discord_gateway.online_members_count %> members online
-      </p>
-    </div>
-    <div class="discord-members-list">
+   <div class="discord-members-list">
       <ul>
         <% discord_gateway.first_30_members.each do |member| %>
           <li>
@@ -23,7 +16,13 @@
         <% end %>
       </ul>
     </div>
-    <%= image_tag "discord-mobile.svg", class:"discord-box__img" %>
+    <div class="discord-cta">
+    <p class="discord-cta__count">
+        <span class="discord-cta__dot"></span>
+        <%= discord_gateway.online_members_count %> members online
+      </p>
+      <a class="cta cta-primary" href="https://discord.com/invite/bUV9u3PSPF" target="_blank">Join our discord</a>
+    </div>
   </div>
 </section>
 <section class="partners-section" id="partners">
