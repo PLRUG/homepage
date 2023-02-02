@@ -37,31 +37,27 @@
         padding: 1rem 0;
     }
 
-    .discord-box .discord-cta {
-        position: static;
-        margin-top: 2rem;
-    }
-
-    .discord-mobile {
-        display: none;
-    }
-
     .discord-members-list {
-      display: flex;
+        width: 35%;
+        margin: 0 auto;
     }
 
     .discord-box {
+        flex-direction: column-reverse;
         background-image: url(discord-desktop.svg);
-        background-repeat: no-repeat;
-        min-height: 270px;
         background-position-x: center;
+        background-size: auto;
+        min-height: 270px;
+        max-width: 100%;
     }
 
-    .discord-box__img {
-        display: none;
+    .discord-cta {
+        flex-direction: column-reverse;
+        margin-top: 1.5rem;
+        padding: 0;
     }
 
     .partners-section .logos-list {
-        max-width: 65%;
+        max-width: 900px;
     }
 }
