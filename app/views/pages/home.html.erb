@@ -67,7 +67,7 @@
     </div>
     <%= f.text_area :message, placeholder: 'Your message', class: "form-box__input", rows: 5 %>
     <div class="form-button">
-      <%= f.submit :send, class: 'cta cta-primary', id: "contact-cta" %>
+      <%= button_tag :send, class: 'cta cta-primary', id: "contact-cta", form: 'contact-form' %>
     </div>
   <% end %>
 </section>
