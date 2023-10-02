@@ -15,6 +15,7 @@ h1 {
   text-align: center;
   letter-spacing: -0.04em;
   max-width: 400px;
+  color: var(--font-base);
 }
 
 h2 {
@@ -23,6 +24,7 @@ h2 {
   line-height: 120%;
   text-align: center;
   letter-spacing: -0.03em;
+  color: var(--font-base);
 }
 
 a:hover {
@@ -39,11 +41,12 @@ a:hover {
   text-transform: uppercase;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none !important;
 }
 
 .cta-primary {
-  background: var(--accent);
-  color: var(--white);
+  background: var(--accent) !important;
+  color: var(--white) !important;
 }
 
 .cta-primary:hover {
@@ -54,7 +57,7 @@ a:hover {
 .cta-secondary {
   background: var(--background-base);
   border: 1px solid var(--accent);
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
 .cta-secondary:hover {
@@ -131,7 +134,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem !important;
   margin: auto;
 }
 
@@ -141,8 +144,19 @@ a:hover {
   letter-spacing: -.01em;
   line-height: 130%;
   padding: 1.5rem 0;
+  color: var(--font-base) !important;
+  text-decoration: none !important;
 }
 
+.link-header {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 170%;
+  letter-spacing: -0.01em;
+  padding: 1rem;
+  color: var(--font-base) !important;
+  text-decoration: none !important;
+}
 
 .hero-section {
   display: flex;
@@ -156,8 +170,9 @@ a:hover {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 6.25rem 0;
+  padding: 3rem 0;
   max-width: 456px;
+  color: var(--font-base)
 }
 
 .hgroup__text {
@@ -282,12 +297,12 @@ a:hover {
 
 .form-box__input {
   background: var(--background-base);
-  border: 1px solid var(--grey);
-  border-radius: 10px;
-  padding: 1rem;
-  width: 100%;
-  font-family: 'Poppins';
-  font-size: 1rem;
+  border: 1px solid var(--grey) !important;
+  border-radius: 10px !important;
+  padding: 1rem !important;
+  width: 100% !important;
+  font-family: 'Poppins' !important;
+  font-size: 1rem !important;
   line-height: 160%;
   letter-spacing: -0.02em;
   color: var(--font-base);
